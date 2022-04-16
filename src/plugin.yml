@@ -1,0 +1,8 @@
+main: com.brpacks.nonopichy.TouchGold
+name: TouchGold
+author: Nonopichy
+version: 1.9
+website: https://brpacks.com.br & https://github.com/Nonopichy
+commands:
+  touchgold:
+    permission: '*'

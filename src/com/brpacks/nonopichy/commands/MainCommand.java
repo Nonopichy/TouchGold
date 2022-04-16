@@ -27,21 +27,16 @@ public class MainCommand implements TabCompleter, CommandExecutor {
             sender.sendMessage(ChatColor.RED + "/touchgold reload");
             return false;
         }
-
         if(args[0].equalsIgnoreCase("reload")){
             JavaPlugin j = TouchGold.getInstance();
             j.reloadConfig();
             j.saveConfig();
-
             Walk.setExchanged(0);
             TouchGold.getProgressBar().load();
-
             sender.sendMessage(ChatColor.GREEN + "TouchGold reinicializado com sucesso!");
             return true;
         }
-
         sender.sendMessage(ChatColor.RED + "/touchgold reload");
-
         return false;
     }
 }

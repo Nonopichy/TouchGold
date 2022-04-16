@@ -23,11 +23,7 @@ public class MainCommand implements TabCompleter, CommandExecutor {
     }
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if(args.length < 1) {
-            sender.sendMessage(ChatColor.RED + "/touchgold reload");
-            return false;
-        }
-        if(args[0].equalsIgnoreCase("reload")){
+        if(args.length > 0 && args[0].equalsIgnoreCase("reload")){
             JavaPlugin j = TouchGold.getInstance();
             j.reloadConfig();
             j.saveConfig();
